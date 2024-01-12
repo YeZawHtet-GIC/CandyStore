@@ -21,11 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('candy',[CandyController::class, 'index'])->name('candy.home');
+Route::get('candy', [CandyController::class, 'index'])->name('candy.home');
 Route::get('candy/create', [CandyController::class, 'create'])->name('candy.create');
 Route::post('candy/store', [CandyController::class, 'store'])->name('candy.store');
 Route::get('candy/show/{candy}', [CandyController::class, 'show'])->name('candy.show');
 Route::get('candy/edit/{candy}', [CandyController::class, 'edit'])->name('candy.edit');
 Route::put('candy/update/{candy}', [CandyController::class, 'update'])->name('candy.update');
-Route::get('candy/destroy/{candy}', [CandyController::class, 'destroy'])->name('candy.destroy');
 Route::delete('candy/destroy/{candy}', [CandyController::class, 'destroy'])->name('candy.destroy');

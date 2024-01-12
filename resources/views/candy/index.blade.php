@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-
         <div class="col-6 offset-3 bg-dark p-5 text-warning rounded">
+            {{-- Add Button --}}
             <div>
                 <a href="{{ route('candy.create') }}" class="btn mb-3 btn-outline-success"><i
                         class="fa-regular fa-square-plus"></i></a>
             </div>
+            {{-- Table Start --}}
             <table class="table table-striped table-info">
                 <thead>
                     <tr>
@@ -48,6 +49,7 @@
 
                 </tbody>
             </table>
+            {{-- Table End --}}
         </div>
     </div>
 @endsection
