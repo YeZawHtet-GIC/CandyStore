@@ -15,12 +15,9 @@ use App\Http\Controllers\CandyController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
 
 Auth::routes();
-
+Route::get('/', [CandyController::class, 'index'])->name('candy.index');
 Route::get('candy', [CandyController::class, 'index'])->name('candy.home');
 Route::get('candy/create', [CandyController::class, 'create'])->name('candy.create');
 Route::post('candy/store', [CandyController::class, 'store'])->name('candy.store');
